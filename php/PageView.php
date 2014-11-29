@@ -12,7 +12,7 @@
   $row=mysql_fetch_array($result);
   $visits=$row['Count']+1;
   //echo "<p>感谢您的光临，当前访问量：".$visits."</p>";
-  echo "document.write('<p>感谢您的光临，当前访问量：'.$visits.'</p>');";
+  echo "document.write(\"<p>感谢您的光临，当前访问量：\".$visits.\"</p>\");";
   mysql_query("UPDATE Counter SET Count="."'".$visits."'");
   mysql_close($con);
 ?>

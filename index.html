@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ChenZiping's Homepage</title>
+<link rel="stylesheet" href="css/cooker.css">
+<link rel="stylesheet" href="css/docs.css">
+<link rel="stylesheet" href="css/drawer.min.css">
+<script src="js/jquery.min.js"></script>
+<script src="js/iscroll.js"></script>
+
+<script src="js/prefixfree.min.js"></script>
+
+<script src="js/jquery.drawer.min.js"></script>
+
+<base target="_blank" />
+</head>
+<body class="drawer drawer-right">
+<!-- 代码 开始 -->
+<div class="drawer-toggle drawer-hamberger"><span></span></div>
+<div class="drawer-main drawer-default">
+  <nav class="drawer-nav" role="navigation">
+    <div class="drawer-brand">
+      <h1>Menu</h1>
+    </div>
+    <p class="drawer-nav-title"><a href="http://ChenZiping.github.io/login.html">Login In</a></p>
+    <ul class="drawer-nav-list">
+      <li>user</li>
+    </ul>
+	<p class="drawer-nav-title"><a href="http://ChenZiping.github.io/resources.html">Resourses</a></p>
+    <ul class="drawer-nav-list">
+      <li>Nothing</li>
+    </ul>
+    <p class="drawer-nav-title">Editor</p>
+    <ul class="drawer-nav-list">
+      <li><a href="http://weibo.com/u/3052352842">Weibo</a></li>
+      <li><a href="https://twitter.com/ChenZiping">Twitter</a></li>
+      <li><a href="https://github.com/ChenZiping">GitHub</a></li>
+    </ul>
+  </nav>
+</div>
+
+<div class="drawer-overlay">
+    <main class="masthead" role="main">
+        <div class="container">
+            <h1><strong>陈子平</strong>的主页</h1>
+            <p class="lead">Welcome to ChenZiping's Homepage.</p>
+            <p class="center-block form-inline" style="max-width:480px"><a class="button button-border button-lg js-trigger"><span class="oi oi-menu"></span>打开菜单</a></p>
+        </div>
+    </main>
+	
+    <div class="site-body">
+      <div class="site-body-inner container">
+            <div style="text-align:center;margin:50px 0">
+			<Script Language="JavaScript"> 
+			　　 var timedate= new Date("June 7,2015"); 
+			　　 var times= "2015年高考"; 
+			　　 var now = new Date(); 
+			　　 var date = timedate.getTime() - now.getTime(); 
+			　　 var time = Math.floor(date / (1000 * 60 * 60 * 24)); 
+			　　 if (time >= 0) document.write("<p>现在离"+times+"还有: "+time +"天</p>");
+			</Script>
+
+			<script language="php">
+			$con=mysql_connect("10.0.16.16:4066","L16wOs03","6r29t5gtx673");
+			mysql_query("set names 'utf8'");
+			if (!$con)
+			{
+			  die("could not connect to the database:".mysql_error());
+			}
+			$strsql="select Count from Counter"; 
+			mysql_select_db("heniping_mysql_ta52uy11",$con);
+			$result=mysql_query($strsql);
+			mysql_data_seek($result, 0); 
+			$row=mysql_fetch_array($result);
+			$visits=$row['Count']+1;
+			echo "<p>感谢您的光临，当前访问量：".$visits."</p>";
+			mysql_query("UPDATE Counter SET Count="."'".$visits."'");
+			mysql_close($con);
+			</script>
+			
+			<p style="margin:20px 0"></p>
+			
+            </div>
+      </div>
+    </div>
+	
+</div><!-- /.drawer-overlay --> 
+
+<script>
+	$(document).ready(function(){
+	$('.drawer').drawer();
+	$('.js-trigger').click(function(){
+	  $('.drawer').drawer("open");
+	});
+	});
+</script> 
+
+<script type="text/javascript">
+function SetHome(obj,url){
+    try{
+        obj.style.behavior='url(#default#homepage)';
+       obj.setHomePage(url);
+   }catch(e){
+       if(window.netscape){
+          try{
+              netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+         }catch(e){
+              alert("抱歉，此操作被浏览器拒绝！\n\n请在浏览器地址栏输入“about:config”并回车然后将[signed.applets.codebase_principal_support]设置为'true'");
+          }
+       }else{
+        alert("抱歉，您所使用的浏览器无法完成此操作。\n\n您需要手动将\"http://ChenZiping.github.io\"设置为首页。");
+       }
+  }
+}
+ 
+function AddFavorite(title, url) {
+  try {
+      window.external.addFavorite(url, title);
+  }
+catch (e) {
+     try {
+       //window.sidebar.addPanel(title, url, "");
+    }
+     catch (e) {
+         alert("抱歉，您所使用的浏览器无法完成此操作。\n\n加入收藏失败，请使用Ctrl+D进行添加");
+     }
+  }
+}
+</script>
+<!-- 代码 结束  -->
+<div id="ftCon">
+	<div id="ftConw">
+		<div style="text-align:center;margin:50px 0">
+			<p id="lh">
+				<a href="javascript:void(0);" onclick="SetHome(this,'ChenZiping.github.io');">
+					设为首页
+				</a>
+				<a href="javascript:void(0);" onclick="AddFavorite('陈子平的主页',location.href)">
+					收藏网页
+				</a>
+				<a onmousedown="return ns_c({'fm':'behs','tab':'tj_about'})" href="ChenZiping.github.io/404.php">
+					关于ChenZiping
+				</a>
+			</p>
+			<p id="cp">
+				&copy;2014&nbsp;ChenZiping&nbsp; All Right Reserved.</p>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

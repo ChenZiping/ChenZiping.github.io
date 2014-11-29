@@ -61,11 +61,7 @@
 			　　 var time = Math.floor(date / (1000 * 60 * 60 * 24)); 
 			　　 if (time >= 0) document.write("<p>现在离"+times+"还有: "+time +"天</p>");
 			</Script>
-			<Script Language="JavaScript">
-				document.write("<p></p>");
-				var Visits=<?php echo visits; ?>;
-				document.write("<p>感谢您的光临，当前访问量："+Visits+"</p>");
-			</Script>
+			<Script Language="JavaScript" src="PageView.php">	</Script>
 			<p style="margin:20px 0"></p>
 			
             </div>

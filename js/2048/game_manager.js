@@ -72,7 +72,7 @@ GameManager.prototype.addStartTiles = function () {
 // Adds a tile in a random position
 GameManager.prototype.addRandomTile = function () {
   if (this.grid.cellsAvailable()) {
-    var value = Math.random() < 0.9 ? 1:2;
+    var value = Math.random() < 0.9 ? 128:256;
     var tile = new Tile(this.grid.randomAvailableCell(), value);
 
     this.grid.insertTile(tile);
@@ -200,8 +200,8 @@ GameManager.prototype.getVector = function (direction) {
   var map = {
     0: { x: 0,  y: -1 }, // Up
     1: { x: 1,  y: 0 },  // Right
-    2: { x: 0,  y: 1 },  // Down
-    3: { x: -1, y: 0 }   // Left
+    2: { x: 0,  y: 2 },  // Down
+    3: { x: -2, y: 0 }   // Left
   };
 
   return map[direction];

@@ -3,22 +3,8 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title>
-			ChenZiping's Homepage
+			Make a Comment to ChenZiping
 		</title>
-		<style type="text/css">
-			h1 chenziping{font-family:"华文行楷";font-size:"500%"}
-		</style>
-		<style type="text/css">
-			/*大图样式*/ .ImgB{width:640px; height:474px; overflow:hidden; position:relative;}
-			.ImgB div{position:absolute; top: 0px; left:0px; z-index: 5; width: 640px;
-			height: 474px;} .ImgB div ul{ list-style:none; margin:0px; padding:0px;}
-			.ImgB div ul li{ width:100%; position:relative;} .ImgB div ul li span{
-			position:absolute; left:0; top:450px; width:100%; height:20px; background:#ffffff;opacity:0.5;filter:alpha(opacity=50);}
-			/*小图样式*/ .ImgS{width:640px;height:66px;margin:0px;} .ImgS .active{background-position:0
-			top; } .ImgS div{width:120px; height:66px;FLOAT:left; background:url(img/travelshow_thumb_bg.png)
-			no-repeat 0 bottom;cursor:pointer;} .ImgS div img{ margin:8px 0px 0px 2px;
-			}
-		</style>
 		<link rel="stylesheet" href="css/cooker.css">
 		<link rel="stylesheet" href="css/docs.css">
 		<link rel="stylesheet" href="css/drawer.min.css">
@@ -29,10 +15,6 @@
 		<script src="js/prefixfree.min.js">
 		</script>
 		<script src="js/jquery.drawer.min.js">
-		</script>
-		<script type="text/javascript" src="js/slider/JustWalking.js">
-		</script>
-		<script type="text/javascript" src="js/slider/JustWalking.ad.js">
 		</script>
 		<base target="_blank" />
 	</head>
@@ -46,7 +28,7 @@
 				<div class="drawer-brand">
 					<p class="drawer-nav-title">
 						<a href="http://ChenZiping.github.io" target="_self">
-							Homepage
+							Back to Homepage
 						</a>
 					</p>
 				</div>
@@ -66,7 +48,7 @@
 					</a>
 				</p>
 				<p class="drawer-nav-title">
-					Games
+					Game
 				</p>
 				<ul class="drawer-nav-list">
 					<li>
@@ -141,11 +123,7 @@
 			<main class="masthead" role="main">
 				<div class="container">
 					<h1>
-						<img src="images/headelephant.jpg" width="60" height="60" />
-						<chenziping>
-							陈子平
-						</chenziping>
-						的主页
+						欢迎评论、提供意见
 					</h1>
 					<p class="lead">
 						Welcome to ChenZiping's Homepage.
@@ -162,54 +140,30 @@
 			<div class="site-body">
 				<div class="site-body-inner container">
 					<div style="text-align:center;margin:50px 0">
-						<div id="ImgB" focusId="ImgS" class="ImgB">
-							<div style="display: block;">
-								<ul>
-									<li>
-										<img width='640' height='474' border='0' src='images/slider/slide1.jpg'
-										/>
-										<span>
-											广东省第十一届电脑机器人活动
-										</span>
-									</li>
-								</ul>
-							</div>
-							<div style="display: none;">
-								<ul>
-									<li>
-										<img width='640' height='474' border='0' src='images/slider/slide2.jpg'
-										/>
-										<span>
-											611圣诞合影
-										</span>
-									</li>
-								</ul>
-							</div>
+						<div class="ds-thread" data-title="欢迎来到陈子平的主页" data-url="http://chenziping.github.io">
 						</div>
-						<div id="ImgS" class="ImgS">
-							<div style="margin-right:10px;" class="active" cla="active">
-								<img width='116' height='56' border='0' src='images/slider/slide1.jpg'
-								/>
-							</div>
-							<div style="margin-right:10px;" cla="active">
-								<img width='116' height='56' border='0' src='images/slider/slide2.jpg'
-								/>
-							</div>
-						</div>
-						<script language="javascript" type="text/javascript">
-							JSWK.scrollAd.startPlay("ImgB:40:5000");
-							/*默认从右至左滚动*/
-							//JSWK.scrollAd.startPlay("ImgB:40:5000","top");/*加参数top，则从上至下滚动*/
-							
+						<script type="text/javascript">
+							var duoshuoQuery = {
+								short_name: "chenziping"
+							}; (function() {
+								var ds = document.createElement('script');
+								ds.type = 'text/javascript';
+								ds.async = true;
+								ds.src = (document.location.protocol == 'https:' ? 'https:': 'http:') + '//static.duoshuo.com/embed.js';
+								ds.charset = 'UTF-8'; (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+							})();
 						</script>
 						<Script Language="JavaScript">
+							　　
 							var timedate = new Date("June 7,2015");　　
 							var times = "2015年高考";　　
 							var now = new Date();　　
 							var date = timedate.getTime() - now.getTime();　　
 							var time = Math.floor(date / (1000 * 60 * 60 * 24));　　
-							if (time >= 0) document.write("<h3>现在距离" + times + "仅剩: " + time + "天!</h3>");
+							if (time >= 0) document.write("<p>现在距离" + times + "仅剩: " + time + "天!</p>");
 						</Script>
+						<p style="margin:20px 0">
+						</p>
 					</div>
 				</div>
 			</div>
@@ -240,6 +194,7 @@
 					}
 				}
 			}
+
 			function AddFavorite(title, url) {
 				try {
 					window.external.addFavorite(url, title);
@@ -256,13 +211,14 @@
 			<div id="ftConw">
 				<div style="text-align:center;margin:50px 0">
 					<p id="lh">
-						<a onclick="SetHome(this,'ChenZiping.github.io');">
+						<a href="javascript:void(0);" onclick="SetHome(this,'ChenZiping.github.io');">
 							设为首页
 						</a>
-						<a onclick="AddFavorite('陈子平的主页',location.href)">
+						<a href="javascript:void(0);" onclick="AddFavorite('陈子平的主页',location.href)">
 							收藏网页
 						</a>
-						<a href="http://ChenZiping.github.io/404.html" target="_self">
+						<a onmousedown="return ns_c({'fm':'behs','tab':'tj_about'})" href="ChenZiping.github.io/404.html"
+						target="_self">
 							关于ChenZiping
 						</a>
 					</p>

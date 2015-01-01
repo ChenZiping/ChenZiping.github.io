@@ -208,6 +208,14 @@
 							var time = Math.floor(date / (1000 * 60 * 60 * 24));　　
 							if (time >= 0) document.write("<h3>现在距离" + times + "仅剩: " + time + "天!</h3>");
 						</Script>
+						<Script Language="JavaScript">
+							var timedate = new Date("March 21,2015");　　
+							var times = "2015年生日";　　
+							var now = new Date();　　
+							var date = timedate.getTime() - now.getTime();　　
+							var time = Math.floor(date / (1000 * 60 * 60 * 24));　　
+							if (time >= 0) document.write("<h3>现在距离" + times + ": " + time + "天</h3>");
+						</Script>
 					</div>
 				</div>
 			</div>

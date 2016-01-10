@@ -1,5 +1,5 @@
 <?php
-  $con=mysql_connect("10.0.16.16:4066","L16wOs03","6r29t5gtx673");
+  $con=mysql_connect(ServerIP,Username,Password);
   mysql_query("set names 'utf8'");
   if (!$con)
   {
